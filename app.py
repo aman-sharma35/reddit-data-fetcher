@@ -34,6 +34,16 @@ def fetch_reddit_posts(filters, limit=100):
 # ----------------------------
 # Streamlit UI
 # ----------------------------
+
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Reddit Data Extractor", page_icon="🔎", layout="centered")
 
 st.title("🔎 Reddit Data Extractor")
